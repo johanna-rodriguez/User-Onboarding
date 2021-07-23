@@ -48,7 +48,7 @@ function Form({teamMembers,setTeamMembers}) {
 
   return (
 <div className="center">
-     <form onSubmit={submit} className="center" >
+     <form onSubmit={submit} className="center" id='formId'>
         <div style={{color:'red'}}>
             <div>{errors.username}</div><div>{errors.email}</div><div>{errors.password}</div><div>{errors.terms}</div>
         </div>
@@ -68,7 +68,7 @@ function Form({teamMembers,setTeamMembers}) {
             <input onChange={change} checked={form.terms} id='ftermsInput'  name='terms' type='checkbox'></input>
          </label>
 
-        <button disabled={disabled}>Submit</button>
+        <button id='fsubmitButton' disabled={disabled}>Submit</button>
      </form>
      
         <pre>
